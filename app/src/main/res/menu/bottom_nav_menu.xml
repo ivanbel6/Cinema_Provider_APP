@@ -3,19 +3,21 @@
 
     <item
         android:id="@+id/first_item"
-        android:icon="@drawable/baseline_home_24"
-        android:title="Home"
-        android:tint="#FFFFFF"/>
+        android:icon="@drawable/building_business_home_house_mobile_navigation_office_icon_123210"
+        android:tint="#FFFFFF"
+        android:title="Home" />
     <item
         android:id="@+id/second_item"
-        android:icon="@drawable/baseline_home_24"
+        android:icon="@drawable/building_business_home_house_mobile_navigation_office_icon_123210"
         android:title="Home" />
     <item
         android:id="@+id/third_item"
-        android:icon="@drawable/baseline_home_24"
+        android:icon="@drawable/building_business_home_house_mobile_navigation_office_icon_123210"
+        android:title="Home"/>
+    <item
+        android:id="@+id/fourth_item"
+        android:icon="@drawable/building_business_home_house_mobile_navigation_office_icon_123210"
         android:title="Home"
-        
-
 
 
         />

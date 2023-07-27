@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FA1515</color>
     <color name="silver">#CCC7C7</color>
-    <color name="active_color">#FA1515</color>
-    <color name="inactive_color">#CCC7C7</color>
+    <color name="active_color">#D3D0D0</color>
+    <color name="inactive_color">#434242</color>
 
 </resources>

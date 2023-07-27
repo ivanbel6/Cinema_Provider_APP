@@ -22,6 +22,9 @@ class TVFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_t_v_, container, false)
     }
+    /**
+    returns an instance of the class
+     **/
 
     companion object {
         @JvmStatic

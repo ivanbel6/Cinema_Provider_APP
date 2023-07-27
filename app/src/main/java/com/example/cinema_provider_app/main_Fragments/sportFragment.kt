@@ -18,6 +18,7 @@ class sportFragment : Fragment() {
     /**
     returns an instance of the class
      **/
+
     companion object {
         @JvmStatic
         fun newInstance() = sportFragment()
