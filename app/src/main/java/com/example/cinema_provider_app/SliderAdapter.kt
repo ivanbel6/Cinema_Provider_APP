@@ -15,7 +15,6 @@ class SliderAdapter(private val itemList: List<SlideItem>) :
         val description: TextView = itemView.findViewById(R.id.descriptionTextView)
         val image: ImageView = itemView.findViewById(R.id.imageView)
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.slide_item, parent, false)

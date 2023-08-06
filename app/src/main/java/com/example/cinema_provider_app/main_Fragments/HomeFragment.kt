@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -38,41 +39,23 @@ class HomeFragment : Fragment() {
         sliderRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        // Добавьте следующий код:
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(sliderRecyclerView)
 
         val slideItems = listOf(
             SlideItem(" Slide 1", "Description 1", R.drawable._54282_admin),
-        SlideItem(" Slide 2", "Description 2", R.drawable._54282_admin),
-        SlideItem(" Slide 3", "Description 3", R.drawable._54282_admin),
-        SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-        SlideItem(" Slide 5", "Description 5", R.drawable._54282_admin)
+            SlideItem(" Slide 2", "Description 2", R.drawable._54282_admin),
+            SlideItem(" Slide 3", "Description 3", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 5", "Description 5", R.drawable._54282_admin)
         )
         val sliderAdapter = SliderAdapter(slideItems)
         sliderRecyclerView.adapter = sliderAdapter
-        sliderRecyclerView.apply {
-            layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = sliderAdapter
-            addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                    super.onScrollStateChanged(recyclerView, newState)
-
-                    if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                        val layoutManager = recyclerView.layoutManager as LinearLayoutManager
-                        val snapPosition = layoutManager.findFirstVisibleItemPosition()
-                        val snapView = layoutManager.findViewByPosition(snapPosition)
-                        val snapDistance = snapView?.left ?: 0
-                        recyclerView.smoothScrollBy(snapDistance, 0)
-                    }
-                }
-            })
-        }
         scrollRunnable = Runnable {
             val layoutManager = sliderRecyclerView.layoutManager as LinearLayoutManager
             val currentPosition = layoutManager.findFirstVisibleItemPosition()
-            val nextPosition = if (currentPosition < sliderAdapter.itemCount - 1) currentPosition + 1 else 0
+            val nextPosition =
+                if (currentPosition < sliderAdapter.itemCount - 1) currentPosition + 1 else 0
 
             sliderRecyclerView.smoothScrollToPosition(nextPosition)
             scrollHandler.postDelayed(scrollRunnable, AUTO_SCROLL_DELAY)
@@ -86,8 +69,10 @@ class HomeFragment : Fragment() {
         scrollHandler.removeCallbacks(scrollRunnable)
         super.onDestroy()
     }
+
     companion object {
         private const val AUTO_SCROLL_DELAY = 10000L // Задержка в миллисекундах (4 секунды)
+
         @JvmStatic
         fun newInstance() = HomeFragment()
     }
