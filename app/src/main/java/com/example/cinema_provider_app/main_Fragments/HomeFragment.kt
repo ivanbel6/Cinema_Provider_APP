@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.indices
+import androidx.core.view.size
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
@@ -38,7 +40,6 @@ class HomeFragment : Fragment() {
         sliderRecyclerView = view.findViewById(R.id.sliderRecyclerView)
         sliderRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(sliderRecyclerView)
 
@@ -55,8 +56,7 @@ class HomeFragment : Fragment() {
             val layoutManager = sliderRecyclerView.layoutManager as LinearLayoutManager
             val currentPosition = layoutManager.findFirstVisibleItemPosition()
             val nextPosition =
-                if (currentPosition < sliderAdapter.itemCount - 1) currentPosition + 1 else 0
-
+                if (currentPosition < sliderAdapter.itemCount-1) currentPosition + 1 else 0
             sliderRecyclerView.smoothScrollToPosition(nextPosition)
             scrollHandler.postDelayed(scrollRunnable, AUTO_SCROLL_DELAY)
         }
