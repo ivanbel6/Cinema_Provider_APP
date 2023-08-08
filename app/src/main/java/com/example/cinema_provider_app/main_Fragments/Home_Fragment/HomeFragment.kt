@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.cinema_provider_app.R
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.FirstTypeAdapter
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.SliderAdapter
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.FirstDataType
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.SlideItem
 
 
@@ -23,6 +25,8 @@ class HomeFragment : Fragment() {
     private lateinit var scrollRunnable: Runnable
     private lateinit var sliderRecyclerView: RecyclerView
 
+    private lateinit var firstTypeRecyclerView: RecyclerView
+    private lateinit var secondTypeRecyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +39,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //FIRST SLIDER ON THE TOP
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         sliderRecyclerView = view.findViewById(R.id.sliderRecyclerView)
         sliderRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -63,13 +71,61 @@ class HomeFragment : Fragment() {
             val layoutManager = sliderRecyclerView.layoutManager as LinearLayoutManager
             val currentPosition = layoutManager.findFirstVisibleItemPosition()
             val nextPosition =
-                if (currentPosition < sliderAdapter.itemCount-1) currentPosition + 1 else 0
+                if (currentPosition < sliderAdapter.itemCount - 1) currentPosition + 1 else 0
             sliderRecyclerView.smoothScrollToPosition(nextPosition)
             scrollHandler.postDelayed(scrollRunnable, AUTO_SCROLL_DELAY)
         }
 
         scrollHandler.postDelayed(scrollRunnable, AUTO_SCROLL_DELAY)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //SECOND SLIDER
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        firstTypeRecyclerView = view.findViewById(R.id.first_type_recycleView)
+        val secondSlideItem = listOf<FirstDataType>(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        firstTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val firstTypeAdapter = FirstTypeAdapter(secondSlideItem)
+        firstTypeRecyclerView.adapter = firstTypeAdapter
+        val snappHelper: SnapHelper = LinearSnapHelper()
+        snappHelper.attachToRecyclerView(firstTypeRecyclerView)
 
+
+
+
+        secondTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_2)
+        val secondTypeSlideItem = listOf<FirstDataType>(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        secondTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter = FirstTypeAdapter(secondTypeSlideItem)
+        secondTypeRecyclerView.adapter = secondTypeAdapter
+        val snappHelperr: SnapHelper = LinearSnapHelper()
+        snappHelperr.attachToRecyclerView(secondTypeRecyclerView)
     }
 
     override fun onDestroy() {
