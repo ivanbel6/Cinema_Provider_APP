@@ -13,18 +13,18 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         app:labelVisibilityMode="labeled"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:animationCache="false"
         android:background="#2A2196F3"
         android:paddingTop="0dp"
         android:paddingBottom="0dp"
         android:textAlignment="center"
-        app:itemIconSize="25dp"
         app:itemIconTint="@color/silver"
         app:itemRippleColor="#8A7979"
         app:itemTextColor="@color/silver"
         app:menu="@menu/bottom_nav_menu"
+        app:itemIconSize="20dp"
         app:itemActiveIndicatorStyle="@style/ShapeAppearance.Material3.Corner.None"/>
 
 

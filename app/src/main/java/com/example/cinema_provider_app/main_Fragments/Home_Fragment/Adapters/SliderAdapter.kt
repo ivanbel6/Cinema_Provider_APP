@@ -1,11 +1,12 @@
-package com.example.cinema_provider_app
+package com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cinema_provider_app.R
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.SlideItem
 import com.google.android.material.imageview.ShapeableImageView
 
 class SliderAdapter(private val itemList: List<SlideItem>) :

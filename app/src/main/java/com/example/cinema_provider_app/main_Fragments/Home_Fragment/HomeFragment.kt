@@ -1,21 +1,20 @@
-package com.example.cinema_provider_app.main_Fragments
+package com.example.cinema_provider_app.main_Fragments.Home_Fragment
 
 import android.os.Bundle
 import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.indices
-import androidx.core.view.size
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import com.example.cinema_provider_app.R
-import com.example.cinema_provider_app.SlideItem
-import com.example.cinema_provider_app.SliderAdapter
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.SliderAdapter
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.SlideItem
+
 
 class HomeFragment : Fragment() {
 
@@ -40,13 +39,21 @@ class HomeFragment : Fragment() {
         sliderRecyclerView = view.findViewById(R.id.sliderRecyclerView)
         sliderRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val snapHelper = LinearSnapHelper()
+
+        val snapHelper: SnapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(sliderRecyclerView)
 
         val slideItems = listOf(
             SlideItem(" Slide 1", "Description 1", R.drawable._54282_admin),
             SlideItem(" Slide 2", "Description 2", R.drawable._54282_admin),
             SlideItem(" Slide 3", "Description 3", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
+            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
             SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
             SlideItem(" Slide 5", "Description 5", R.drawable._54282_admin)
         )
