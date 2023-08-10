@@ -6,5 +6,9 @@
     <color name="silver">#CCC7C7</color>
     <color name="active_color">#D3D0D0</color>
     <color name="inactive_color">#434242</color>
+    <color name="transparent">#00434242</color>
+    <color name="transparent50">#80434242</color>
+    <color name="transparent25">#40434242</color>
+    <color name="transparent70">#B3434242</color>
 
 </resources>

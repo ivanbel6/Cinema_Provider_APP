@@ -26,16 +26,40 @@
             android:text="Hello"
             android:textColor="@color/silver"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/first_type_recycleView"
+            app:layout_constraintBottom_toTopOf="@+id/CustomRecycleView"
             app:layout_constraintTop_toBottomOf="@+id/sliderRecyclerView"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/first_type_recycleView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="276dp"
             android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/sliderRecyclerView"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="Hello"
+            android:textColor="@color/silver"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/first_type_recycleView"
+            app:layout_constraintTop_toBottomOf="@+id/CustomRecycleView"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CustomRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clipToPadding="true"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             app:layout_constraintTop_toBottomOf="@+id/sliderRecyclerView"

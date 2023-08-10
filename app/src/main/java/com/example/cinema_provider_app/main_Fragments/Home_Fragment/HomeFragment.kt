@@ -5,6 +5,7 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
@@ -12,8 +13,10 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.cinema_provider_app.R
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.CustomRecycleAdapter
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.FirstTypeAdapter
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.SliderAdapter
+import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.CustomDataClass
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.FirstDataType
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Data_Classes.SlideItem
 
@@ -27,9 +30,11 @@ class HomeFragment : Fragment() {
 
     private lateinit var firstTypeRecyclerView: RecyclerView
     private lateinit var secondTypeRecyclerView: RecyclerView
+    private lateinit var customRecyclerView: RecyclerView
+
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -79,7 +84,7 @@ class HomeFragment : Fragment() {
         scrollHandler.postDelayed(scrollRunnable, AUTO_SCROLL_DELAY)
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //SECOND SLIDER
+        //SECOND TYPE SLIDER's
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         firstTypeRecyclerView = view.findViewById(R.id.first_type_recycleView)
@@ -126,12 +131,49 @@ class HomeFragment : Fragment() {
         secondTypeRecyclerView.adapter = secondTypeAdapter
         val snappHelperr: SnapHelper = LinearSnapHelper()
         snappHelperr.attachToRecyclerView(secondTypeRecyclerView)
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //CUSTOM TYPE SLIDER's
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        customRecyclerView = view.findViewById(R.id.CustomRecycleView)
+        customRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val customList = listOf(
+            CustomDataClass(
+                R.drawable.bg_game,
+                "Игра престолов",
+                "Описание , Описание Описание Описание ",
+                "8.9",
+                "Фентези , Романтика , Триллер"),
+
+
+
+            )
+            val customAdapter = CustomRecycleAdapter (customList, this)
+        customRecyclerView.adapter = customAdapter
+        val customSnapHelper: SnapHelper = PagerSnapHelper()
+        customSnapHelper.attachToRecyclerView(customRecyclerView)
+
+
     }
 
     override fun onDestroy() {
         scrollHandler.removeCallbacks(scrollRunnable)
         super.onDestroy()
     }
+
+    fun placeHolder(key: String) {
+        if (key == "icon1") {
+            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show();
+        }
+        if (key == "icon2") {
+            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
 
     companion object {
         private const val AUTO_SCROLL_DELAY = 10000L // Задержка в миллисекундах (4 секунды)
