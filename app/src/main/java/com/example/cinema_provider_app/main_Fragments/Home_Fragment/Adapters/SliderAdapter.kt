@@ -11,12 +11,14 @@ import com.google.android.material.imageview.ShapeableImageView
 
 class SliderAdapter(private val itemList: List<SlideItem>) :
     RecyclerView.Adapter<SliderAdapter.ViewHolder>() {
+    var a = 1
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.titleTextView)
         val description: TextView = itemView.findViewById(R.id.descriptionTextView)
         val image: ShapeableImageView = itemView.findViewById(R.id.imageView)
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.slide_item, parent, false)
