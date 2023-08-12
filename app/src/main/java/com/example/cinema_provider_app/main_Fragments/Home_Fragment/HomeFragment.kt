@@ -57,18 +57,11 @@ class HomeFragment : Fragment() {
         snapHelper.attachToRecyclerView(sliderRecyclerView)
 
         val slideItems = listOf(
-            SlideItem(" Slide 1", "Description 1", R.drawable._54282_admin),
-            SlideItem(" Slide 2", "Description 2", R.drawable._54282_admin),
-            SlideItem(" Slide 3", "Description 3", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 4", "Description 4", R.drawable._54282_admin),
-            SlideItem(" Slide 5", "Description 5", R.drawable._54282_admin)
+            SlideItem(" Slide 1", "Description 1", R.drawable.slider_1_3),
+            SlideItem(" Slide 2", "Description 2", R.drawable.slider_1_mermid_jpg),
+            SlideItem(" Slide 3", "Description 3", R.drawable.slider_1_4_final),
+            SlideItem(" Slide 4", "Description 4", R.drawable.slider_1_1_final),
+            SlideItem(" Slide 4", "Description 4", R.drawable.slider_1_fflash)
         )
         val sliderAdapter = SliderAdapter(slideItems)
         sliderRecyclerView.adapter = sliderAdapter
@@ -144,14 +137,14 @@ class HomeFragment : Fragment() {
             CustomDataClass(
                 R.drawable.bg_game,
                 "Игра престолов",
-                "Описание , Описание Описание Описание ",
+                "Действие сериала происходит на вымышленных континентах Вестерос и Эссос и повествует о борьбе за власть между благородными семьями, борющимися за контроль над Железным троном Семи Королевств.",
                 "8.9",
-                "Фентези , Романтика , Триллер"),
-
+                "Фентези , Романтика , Триллер"
+            ),
 
 
             )
-            val customAdapter = CustomRecycleAdapter (customList, this)
+        val customAdapter = CustomRecycleAdapter(customList, this)
         customRecyclerView.adapter = customAdapter
         val customSnapHelper: SnapHelper = PagerSnapHelper()
         customSnapHelper.attachToRecyclerView(customRecyclerView)
