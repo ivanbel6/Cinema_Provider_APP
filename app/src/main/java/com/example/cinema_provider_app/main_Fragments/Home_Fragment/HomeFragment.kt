@@ -171,17 +171,16 @@ class HomeFragment : Fragment() {
 
         fourthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_4)
         val fourthTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+            FirstDataType(R.drawable.h_1),
+            FirstDataType(R.drawable.h_2),
+            FirstDataType(R.drawable.h_3),
+            FirstDataType(R.drawable.h_4),
+            FirstDataType(R.drawable.h_5),
+            FirstDataType(R.drawable.h_6),
+            FirstDataType(R.drawable.h_7),
+            FirstDataType(R.drawable.h_8),
+            FirstDataType(R.drawable.h_9),
+            FirstDataType(R.drawable.h_11)
         )
         fourthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -195,17 +194,17 @@ class HomeFragment : Fragment() {
 
         fifthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_5)
         val fiveTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+            FirstDataType(R.drawable.s_1),
+            FirstDataType(R.drawable.s_2),
+            FirstDataType(R.drawable.s_3),
+            FirstDataType(R.drawable.s_4),
+            FirstDataType(R.drawable.s_5),
+            FirstDataType(R.drawable.s_6),
+            FirstDataType(R.drawable.s_7),
+            FirstDataType(R.drawable.s_8),
+            FirstDataType(R.drawable.s_9),
+            FirstDataType(R.drawable.s_10),
+            FirstDataType(R.drawable.s_11)
         )
         fifthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
