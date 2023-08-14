@@ -31,16 +31,18 @@ class HomeFragment : Fragment() {
 
     private lateinit var firstTypeRecyclerView: RecyclerView
     private lateinit var secondTypeRecyclerView: RecyclerView
+    private lateinit var thirdTypeRecyclerView: RecyclerView
+    private lateinit var fourthTypeRecyclerView: RecyclerView
+    private lateinit var fifthTypeRecyclerView: RecyclerView
+    private lateinit var sixthTypeRecyclerView: RecyclerView
+    private lateinit var sevenTypeRecyclerView: RecyclerView
     private lateinit var customRecyclerView: RecyclerView
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,8 +56,8 @@ class HomeFragment : Fragment() {
         sliderRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        val snapHelper: SnapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(sliderRecyclerView)
+        val snapHelper1: SnapHelper = PagerSnapHelper()
+        snapHelper1.attachToRecyclerView(sliderRecyclerView)
 
         val slideItems = listOf(
             SlideItem(
@@ -100,31 +102,31 @@ class HomeFragment : Fragment() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         firstTypeRecyclerView = view.findViewById(R.id.first_type_recycleView)
-        val secondSlideItem = listOf<FirstDataType>(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+        val secondSlideItem = listOf(
+            FirstDataType(R.drawable.d_11),
+            FirstDataType(R.drawable.d_8),
+            FirstDataType(R.drawable.d_3),
+            FirstDataType(R.drawable.d_4),
+            FirstDataType(R.drawable.d_5),
+            FirstDataType(R.drawable.d_6),
+            FirstDataType(R.drawable.d_7),
+            FirstDataType(R.drawable.d_2),
+            FirstDataType(R.drawable.d_9),
+            FirstDataType(R.drawable.d_10),
+            FirstDataType(R.drawable.__1)
         )
         firstTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val firstTypeAdapter = FirstTypeAdapter(secondSlideItem)
         firstTypeRecyclerView.adapter = firstTypeAdapter
-        val snappHelper: SnapHelper = LinearSnapHelper()
-        snappHelper.attachToRecyclerView(firstTypeRecyclerView)
+        val snapHelper: SnapHelper = LinearSnapHelper()
+        snapHelper.attachToRecyclerView(firstTypeRecyclerView)
 
 
 
 
         secondTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_2)
-        val secondTypeSlideItem = listOf<FirstDataType>(
+        val secondTypeSlideItem = listOf(
             FirstDataType(R.drawable._54282_admin),
             FirstDataType(R.drawable._54282_admin),
             FirstDataType(R.drawable._54282_admin),
@@ -141,8 +143,121 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val secondTypeAdapter = FirstTypeAdapter(secondTypeSlideItem)
         secondTypeRecyclerView.adapter = secondTypeAdapter
-        val snappHelperr: SnapHelper = LinearSnapHelper()
-        snappHelperr.attachToRecyclerView(secondTypeRecyclerView)
+        val snapHelper2: SnapHelper = LinearSnapHelper()
+        snapHelper2.attachToRecyclerView(secondTypeRecyclerView)
+
+
+
+        thirdTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_3)
+        val thirdthTypeSlideItem = listOf(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        thirdTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter3 = FirstTypeAdapter(thirdthTypeSlideItem)
+        thirdTypeRecyclerView.adapter = secondTypeAdapter3
+        val snapHelper3: SnapHelper = LinearSnapHelper()
+        snapHelper3.attachToRecyclerView(thirdTypeRecyclerView)
+
+        fourthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_4)
+        val fourthTypeSlideItem = listOf(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        fourthTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter4 = FirstTypeAdapter(fourthTypeSlideItem)
+        fourthTypeRecyclerView.adapter = secondTypeAdapter4
+        val snapHelper4: SnapHelper = LinearSnapHelper()
+        snapHelper4.attachToRecyclerView(fourthTypeRecyclerView)
+
+
+
+
+        fifthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_5)
+        val fiveTypeSlideItem = listOf(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        fifthTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter5 = FirstTypeAdapter(fiveTypeSlideItem)
+        fifthTypeRecyclerView.adapter = secondTypeAdapter5
+        val snapHelper5: SnapHelper = LinearSnapHelper()
+        snapHelper5.attachToRecyclerView(fifthTypeRecyclerView)
+
+
+        sixthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_6)
+        val sixthTypeSlideItem = listOf(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        sixthTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter6 = FirstTypeAdapter(sixthTypeSlideItem)
+        sixthTypeRecyclerView.adapter = secondTypeAdapter6
+        val snapHelper6: SnapHelper = LinearSnapHelper()
+        snapHelper6.attachToRecyclerView(sixthTypeRecyclerView)
+
+
+        sevenTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_7)
+        val sevenTypeSlideItem = listOf(
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin),
+            FirstDataType(R.drawable._54282_admin)
+        )
+        sevenTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter7 = FirstTypeAdapter(sevenTypeSlideItem)
+        sevenTypeRecyclerView.adapter = secondTypeAdapter7
+        val snapHelper7: SnapHelper = LinearSnapHelper()
+        snapHelper7.attachToRecyclerView(sevenTypeRecyclerView)
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -206,10 +321,10 @@ class HomeFragment : Fragment() {
 
     fun placeHolder(key: String) {
         if (key == "icon1") {
-            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show()
         }
         if (key == "icon2") {
-            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show()
         }
 
     }
