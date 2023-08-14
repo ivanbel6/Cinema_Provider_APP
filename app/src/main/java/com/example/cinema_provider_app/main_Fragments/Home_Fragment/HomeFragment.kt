@@ -36,6 +36,8 @@ class HomeFragment : Fragment() {
     private lateinit var fifthTypeRecyclerView: RecyclerView
     private lateinit var sixthTypeRecyclerView: RecyclerView
     private lateinit var sevenTypeRecyclerView: RecyclerView
+    private lateinit var eighthTypeRecyclerView: RecyclerView
+    private lateinit var ninthTypeRecyclerView: RecyclerView
     private lateinit var customRecyclerView: RecyclerView
 
 
@@ -258,6 +260,53 @@ class HomeFragment : Fragment() {
         sevenTypeRecyclerView.adapter = secondTypeAdapter7
         val snapHelper7: SnapHelper = LinearSnapHelper()
         snapHelper7.attachToRecyclerView(sevenTypeRecyclerView)
+
+
+
+        eighthTypeRecyclerView  = view.findViewById(R.id.first_type_recycleView_8)
+        val eightTypeSlideItem = listOf(
+            FirstDataType(R.drawable.anim_1),
+            FirstDataType(R.drawable.anim_2),
+            FirstDataType(R.drawable.anim_3),
+            FirstDataType(R.drawable.anim_4),
+            FirstDataType(R.drawable.anim_5),
+            FirstDataType(R.drawable.anim_6),
+            FirstDataType(R.drawable.anim_7),
+            FirstDataType(R.drawable.anim_8),
+            FirstDataType(R.drawable.anim_9),
+            FirstDataType(R.drawable.anim_10),
+            FirstDataType(R.drawable.anim_11)
+        )
+        eighthTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter8 = FirstTypeAdapter(eightTypeSlideItem)
+        eighthTypeRecyclerView.adapter = secondTypeAdapter8
+        val snapHelper8: SnapHelper = LinearSnapHelper()
+        snapHelper8.attachToRecyclerView(eighthTypeRecyclerView)
+
+
+
+
+        ninthTypeRecyclerView  = view.findViewById(R.id.first_type_recycleView_9)
+        val ninthTypeSlideItem = listOf(
+            FirstDataType(R.drawable.detect_1),
+            FirstDataType(R.drawable.detect_2),
+            FirstDataType(R.drawable.detect_3),
+            FirstDataType(R.drawable.detect_4),
+            FirstDataType(R.drawable.detect_5),
+            FirstDataType(R.drawable.detect_6),
+            FirstDataType(R.drawable.detect_7),
+            FirstDataType(R.drawable.detect_8),
+            FirstDataType(R.drawable.detect_9),
+            FirstDataType(R.drawable.detect_10),
+            FirstDataType(R.drawable.detect_11),
+        )
+        ninthTypeRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val secondTypeAdapter9 = FirstTypeAdapter(ninthTypeSlideItem)
+        ninthTypeRecyclerView.adapter = secondTypeAdapter9
+        val snapHelper9: SnapHelper = LinearSnapHelper()
+        snapHelper9.attachToRecyclerView(ninthTypeRecyclerView)
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
