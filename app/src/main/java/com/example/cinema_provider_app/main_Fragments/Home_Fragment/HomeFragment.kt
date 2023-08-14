@@ -127,17 +127,17 @@ class HomeFragment : Fragment() {
 
         secondTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_2)
         val secondTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+            FirstDataType(R.drawable.f_1),
+            FirstDataType(R.drawable.f_2),
+            FirstDataType(R.drawable.f_3),
+            FirstDataType(R.drawable.f_4),
+            FirstDataType(R.drawable.f_5),
+            FirstDataType(R.drawable.f_6),
+            FirstDataType(R.drawable.f_7),
+            FirstDataType(R.drawable.f_8),
+            FirstDataType(R.drawable.f_9),
+            FirstDataType(R.drawable.f_10),
+            FirstDataType(R.drawable.f_11)
         )
         secondTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -149,22 +149,22 @@ class HomeFragment : Fragment() {
 
 
         thirdTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_3)
-        val thirdthTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+        val thirdTypeSlideItem = listOf(
+            FirstDataType(R.drawable.a_1),
+            FirstDataType(R.drawable.a_2),
+            FirstDataType(R.drawable.a_3),
+            FirstDataType(R.drawable.a_4),
+            FirstDataType(R.drawable.a_5),
+            FirstDataType(R.drawable.a_6),
+            FirstDataType(R.drawable.a_7),
+            FirstDataType(R.drawable.a_8),
+            FirstDataType(R.drawable.a_9),
+            FirstDataType(R.drawable.a_10),
+            FirstDataType(R.drawable.a_11)
         )
         thirdTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter3 = FirstTypeAdapter(thirdthTypeSlideItem)
+        val secondTypeAdapter3 = FirstTypeAdapter(thirdTypeSlideItem)
         thirdTypeRecyclerView.adapter = secondTypeAdapter3
         val snapHelper3: SnapHelper = LinearSnapHelper()
         snapHelper3.attachToRecyclerView(thirdTypeRecyclerView)
