@@ -216,17 +216,18 @@ class HomeFragment : Fragment() {
 
         sixthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_6)
         val sixthTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+            FirstDataType(R.drawable.cartoon_1),
+            FirstDataType(R.drawable.cartoon_2),
+            FirstDataType(R.drawable.cartoon_3),
+            FirstDataType(R.drawable.cartoon_3),
+            FirstDataType(R.drawable.cartoon_4),
+            FirstDataType(R.drawable.cartoon_5),
+            FirstDataType(R.drawable.cartoon_6),
+            FirstDataType(R.drawable.cartoon_7),
+            FirstDataType(R.drawable.cartoon_8),
+            FirstDataType(R.drawable.cartoon_9),
+            FirstDataType(R.drawable.cartoon_10),
+            FirstDataType(R.drawable.cartoon_11)
         )
         sixthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
@@ -238,17 +239,18 @@ class HomeFragment : Fragment() {
 
         sevenTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_7)
         val sevenTypeSlideItem = listOf(
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin),
-            FirstDataType(R.drawable._54282_admin)
+            FirstDataType(R.drawable.adventure_1),
+            FirstDataType(R.drawable.adventure_2),
+            FirstDataType(R.drawable.adventure_3),
+            FirstDataType(R.drawable.adventure_3),
+            FirstDataType(R.drawable.adventure_4),
+            FirstDataType(R.drawable.adventure_5),
+            FirstDataType(R.drawable.adventure_6),
+            FirstDataType(R.drawable.adventure_7),
+            FirstDataType(R.drawable.adventure_8),
+            FirstDataType(R.drawable.adventure_9),
+            FirstDataType(R.drawable.adventure_10),
+            FirstDataType(R.drawable.adventure_11)
         )
         sevenTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
