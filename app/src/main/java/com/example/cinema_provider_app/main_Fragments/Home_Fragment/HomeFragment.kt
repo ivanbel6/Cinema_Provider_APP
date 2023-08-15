@@ -265,7 +265,7 @@ class HomeFragment : Fragment() {
 
 
 
-        eighthTypeRecyclerView  = view.findViewById(R.id.first_type_recycleView_8)
+        eighthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_8)
         val eightTypeSlideItem = listOf(
             FirstDataType(R.drawable.anim_1),
             FirstDataType(R.drawable.anim_2),
@@ -289,7 +289,7 @@ class HomeFragment : Fragment() {
 
 
 
-        ninthTypeRecyclerView  = view.findViewById(R.id.first_type_recycleView_9)
+        ninthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_9)
         val ninthTypeSlideItem = listOf(
             FirstDataType(R.drawable.detect_1),
             FirstDataType(R.drawable.detect_2),
@@ -311,7 +311,7 @@ class HomeFragment : Fragment() {
         snapHelper9.attachToRecyclerView(ninthTypeRecyclerView)
 
 
-        tenthTypeRecyclerView  = view.findViewById(R.id.first_type_recycleView_10)
+        tenthTypeRecyclerView = view.findViewById(R.id.first_type_recycleView_10)
         val tenthTypeSlideItem = listOf(
             FirstDataType(R.drawable.family_1),
             FirstDataType(R.drawable.family_2),
