@@ -33,7 +33,6 @@ class CustomRecycleAdapter(private val list: List<CustomDataClass>,private val h
         holder.genre.text = currentItem.Genre
         holder.icon1.setOnClickListener {
 
-            homeFragment.placeHolder("icon1")
         }
 
 

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
     app:cardCornerRadius="4dp"
-    android:layout_marginStart="7dp"
-    android:layout_marginEnd="7dp"
     app:cardElevation="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,10 +15,13 @@
 
         <ImageView
             android:id="@+id/cardBackgroundImage"
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="210dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
 
         <View
@@ -85,16 +88,16 @@
         <TextView
             android:id="@+id/Title"
             android:layout_width="137dp"
+            android:layout_height="36dp"
             android:layout_marginBottom="2dp"
+            android:layout_weight="3"
+            android:gravity="center"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:layout_height="36dp"
-            android:layout_weight="3"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/description"
             app:layout_constraintEnd_toEndOf="@+id/view2"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,10 +112,10 @@
             android:layout_marginTop="40dp"
             android:layout_weight="0.6"
             android:gravity="center"
-            android:paddingStart="3dp"
-            android:paddingEnd="3dp"
-
-
+            android:paddingStart="4dp"
+            android:paddingLeft="40dp"
+            android:paddingEnd="4dp"
+            android:paddingRight="40dp"
             android:textColor="@color/silver"
 
             android:textSize="11sp"

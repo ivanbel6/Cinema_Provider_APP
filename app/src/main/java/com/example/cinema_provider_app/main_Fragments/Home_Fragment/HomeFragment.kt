@@ -121,7 +121,7 @@ class HomeFragment : Fragment() {
         )
         firstTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val firstTypeAdapter = FirstTypeAdapter(secondSlideItem)
+        val firstTypeAdapter = FirstTypeAdapter(secondSlideItem, this)
         firstTypeRecyclerView.adapter = firstTypeAdapter
         val snapHelper: SnapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(firstTypeRecyclerView)
@@ -145,7 +145,7 @@ class HomeFragment : Fragment() {
         )
         secondTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter = FirstTypeAdapter(secondTypeSlideItem)
+        val secondTypeAdapter = FirstTypeAdapter(secondTypeSlideItem, this)
         secondTypeRecyclerView.adapter = secondTypeAdapter
         val snapHelper2: SnapHelper = LinearSnapHelper()
         snapHelper2.attachToRecyclerView(secondTypeRecyclerView)
@@ -168,7 +168,7 @@ class HomeFragment : Fragment() {
         )
         thirdTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter3 = FirstTypeAdapter(thirdTypeSlideItem)
+        val secondTypeAdapter3 = FirstTypeAdapter(thirdTypeSlideItem, this)
         thirdTypeRecyclerView.adapter = secondTypeAdapter3
         val snapHelper3: SnapHelper = LinearSnapHelper()
         snapHelper3.attachToRecyclerView(thirdTypeRecyclerView)
@@ -188,7 +188,7 @@ class HomeFragment : Fragment() {
         )
         fourthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter4 = FirstTypeAdapter(fourthTypeSlideItem)
+        val secondTypeAdapter4 = FirstTypeAdapter(fourthTypeSlideItem, this)
         fourthTypeRecyclerView.adapter = secondTypeAdapter4
         val snapHelper4: SnapHelper = LinearSnapHelper()
         snapHelper4.attachToRecyclerView(fourthTypeRecyclerView)
@@ -212,7 +212,7 @@ class HomeFragment : Fragment() {
         )
         fifthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter5 = FirstTypeAdapter(fiveTypeSlideItem)
+        val secondTypeAdapter5 = FirstTypeAdapter(fiveTypeSlideItem, this)
         fifthTypeRecyclerView.adapter = secondTypeAdapter5
         val snapHelper5: SnapHelper = LinearSnapHelper()
         snapHelper5.attachToRecyclerView(fifthTypeRecyclerView)
@@ -235,7 +235,7 @@ class HomeFragment : Fragment() {
         )
         sixthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter6 = FirstTypeAdapter(sixthTypeSlideItem)
+        val secondTypeAdapter6 = FirstTypeAdapter(sixthTypeSlideItem, this)
         sixthTypeRecyclerView.adapter = secondTypeAdapter6
         val snapHelper6: SnapHelper = LinearSnapHelper()
         snapHelper6.attachToRecyclerView(sixthTypeRecyclerView)
@@ -258,7 +258,7 @@ class HomeFragment : Fragment() {
         )
         sevenTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter7 = FirstTypeAdapter(sevenTypeSlideItem)
+        val secondTypeAdapter7 = FirstTypeAdapter(sevenTypeSlideItem, this)
         sevenTypeRecyclerView.adapter = secondTypeAdapter7
         val snapHelper7: SnapHelper = LinearSnapHelper()
         snapHelper7.attachToRecyclerView(sevenTypeRecyclerView)
@@ -281,7 +281,7 @@ class HomeFragment : Fragment() {
         )
         eighthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter8 = FirstTypeAdapter(eightTypeSlideItem)
+        val secondTypeAdapter8 = FirstTypeAdapter(eightTypeSlideItem, this)
         eighthTypeRecyclerView.adapter = secondTypeAdapter8
         val snapHelper8: SnapHelper = LinearSnapHelper()
         snapHelper8.attachToRecyclerView(eighthTypeRecyclerView)
@@ -305,7 +305,7 @@ class HomeFragment : Fragment() {
         )
         ninthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter9 = FirstTypeAdapter(ninthTypeSlideItem)
+        val secondTypeAdapter9 = FirstTypeAdapter(ninthTypeSlideItem, this)
         ninthTypeRecyclerView.adapter = secondTypeAdapter9
         val snapHelper9: SnapHelper = LinearSnapHelper()
         snapHelper9.attachToRecyclerView(ninthTypeRecyclerView)
@@ -327,7 +327,7 @@ class HomeFragment : Fragment() {
         )
         tenthTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter10 = FirstTypeAdapter(tenthTypeSlideItem)
+        val secondTypeAdapter10 = FirstTypeAdapter(tenthTypeSlideItem, this)
         tenthTypeRecyclerView.adapter = secondTypeAdapter10
         val snapHelper10: SnapHelper = LinearSnapHelper()
         snapHelper10.attachToRecyclerView(tenthTypeRecyclerView)
@@ -350,7 +350,7 @@ class HomeFragment : Fragment() {
         )
         eleventhTypeRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        val secondTypeAdapter11 = FirstTypeAdapter(eleventhTypeSlideItem)
+        val secondTypeAdapter11 = FirstTypeAdapter(eleventhTypeSlideItem, this)
         eleventhTypeRecyclerView.adapter = secondTypeAdapter11
         val snapHelper11: SnapHelper = LinearSnapHelper()
         snapHelper11.attachToRecyclerView(eleventhTypeRecyclerView)
@@ -416,21 +416,1000 @@ class HomeFragment : Fragment() {
         super.onDestroy()
     }
 
-    fun placeHolder(key: String) {
-        if (key == "icon1") {
-            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show()
-        }
-        if (key == "icon2") {
-            Toast.makeText(activity, key, Toast.LENGTH_SHORT).show()
+    fun placeHolder(adapterPosition: Int, view: View) {
+        val fatherId = (view.parent.parent.parent as View).id
+        val fatherIdName = resources.getResourceEntryName(fatherId)
+        when (fatherIdName) {
+            "frameLayout_11" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Драмма -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+            }
+
+            "frameLayout_22" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Боевик -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Комедия -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_2" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Ужасы -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_3" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Научная фантастика -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_4" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Мультфильмы -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_5" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Приключения -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_6" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Аниме -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_7" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Детектив 1 -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_8" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Семейное -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            "frameLayout_9" -> {
+                when (adapterPosition) {
+                    0 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 0",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    1 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 1",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    2 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 2",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    3 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 3",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    4 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 4",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    5 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 5",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    6 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 6",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    7 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 7",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    8 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 8",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    9 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 9",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    10 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 10",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    11 -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Историческое -> 11",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
         }
 
     }
-
 
     companion object {
         private const val AUTO_SCROLL_DELAY = 10000L // Задержка в миллисекундах (4 секунды)
 
         @JvmStatic
         fun newInstance() = HomeFragment()
+
+
     }
 }

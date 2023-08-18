@@ -43,5 +43,6 @@ class SliderAdapter(private val itemList: List<SlideItem>) :
 
     override fun getItemCount(): Int {
         return itemList.size
+
     }
 }
