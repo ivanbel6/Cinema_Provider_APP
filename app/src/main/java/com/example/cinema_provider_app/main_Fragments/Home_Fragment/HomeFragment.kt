@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.cinema_provider_app.R
+import com.example.cinema_provider_app.main_Fragments.BlankHomeFragment
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.CustomRecycleAdapter
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.FirstTypeAdapter
 import com.example.cinema_provider_app.main_Fragments.Home_Fragment.Adapters.SliderAdapter
@@ -423,12 +424,14 @@ class HomeFragment : Fragment() {
             "frameLayout_11" -> {
                 when (adapterPosition) {
                     0 -> {
+                        showFragment(R.drawable.historic_7)
                         Toast.makeText(
                             requireContext(),
                             "Драмма -> 0",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -436,6 +439,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -443,6 +447,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -450,6 +455,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -457,6 +463,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -464,6 +471,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -471,6 +479,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -478,6 +487,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -485,6 +495,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -492,6 +503,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -499,6 +511,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -519,6 +532,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -526,6 +540,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -533,6 +548,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -540,6 +556,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -547,6 +564,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -554,6 +572,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -561,6 +580,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -568,6 +588,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -575,6 +596,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -582,6 +604,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -589,6 +612,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -608,6 +632,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -615,6 +640,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -622,6 +648,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -629,6 +656,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -636,6 +664,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -643,6 +672,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -650,6 +680,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -657,6 +688,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -664,6 +696,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -671,6 +704,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -678,6 +712,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -697,6 +732,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -704,6 +740,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -711,6 +748,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -718,6 +756,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -725,6 +764,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -732,6 +772,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -739,6 +780,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -746,6 +788,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -753,6 +796,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -760,6 +804,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -767,6 +812,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -786,6 +832,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -793,6 +840,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -800,6 +848,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -807,6 +856,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -814,6 +864,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -821,6 +872,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -828,6 +880,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -835,6 +888,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -842,6 +896,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -849,6 +904,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -856,6 +912,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -875,6 +932,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -882,6 +940,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -889,6 +948,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -896,6 +956,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -903,6 +964,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -910,6 +972,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -917,6 +980,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -924,6 +988,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -931,6 +996,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -938,6 +1004,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -945,6 +1012,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -964,6 +1032,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -971,6 +1040,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -978,6 +1048,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -985,6 +1056,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -992,6 +1064,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -999,6 +1072,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1006,6 +1080,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1013,6 +1088,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1020,6 +1096,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1027,6 +1104,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1034,6 +1112,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1053,6 +1132,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1060,6 +1140,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1067,6 +1148,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1074,6 +1156,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1081,6 +1164,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1088,6 +1172,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1095,6 +1180,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1102,6 +1188,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1109,6 +1196,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1116,6 +1204,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1123,6 +1212,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1142,6 +1232,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1149,6 +1240,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1156,6 +1248,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1163,6 +1256,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1170,6 +1264,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1177,6 +1272,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1184,6 +1280,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1191,6 +1288,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1198,6 +1296,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1205,6 +1304,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1212,6 +1312,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1231,6 +1332,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1238,6 +1340,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1245,6 +1348,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1252,6 +1356,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1259,6 +1364,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1266,6 +1372,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1273,6 +1380,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1280,6 +1388,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1287,6 +1396,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1294,6 +1404,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1301,6 +1412,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1320,6 +1432,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     1 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1327,6 +1440,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     2 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1334,6 +1448,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     3 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1341,6 +1456,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     4 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1348,6 +1464,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     5 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1355,6 +1472,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     6 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1362,6 +1480,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     7 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1369,6 +1488,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     8 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1376,6 +1496,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     9 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1383,6 +1504,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     10 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1390,6 +1512,7 @@ class HomeFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
                     11 -> {
                         Toast.makeText(
                             requireContext(),
@@ -1403,6 +1526,18 @@ class HomeFragment : Fragment() {
         }
 
     }
+
+    private fun showFragment(cardImage:Int) {
+        val fragment = BlankHomeFragment.newInstance(cardImage)
+        changeFragment(fragment)
+    }
+
+    private fun changeFragment(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.Main_Space_To_Fragment, fragment)
+            .commit()
+    }
+
 
     companion object {
         private const val AUTO_SCROLL_DELAY = 10000L // Задержка в миллисекундах (4 секунды)
