@@ -3,12 +3,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FA1515</color>
-    <color name="silver">#CCC7C7</color>
+    <color name="silver">#80CCC7C7</color>
+    <color name="silver_transparent">#3ECCC7C7</color>
+    <color name="silver_text">#BACDC5C5</color>
     <color name="active_color">#D3D0D0</color>
     <color name="inactive_color">#434242</color>
     <color name="transparent">#00434242</color>
     <color name="transparent50">#80434242</color>
     <color name="transparent25">#40434242</color>
     <color name="transparent70">#B3434242</color>
-
+    <color name="bg">#121420</color>
 </resources>

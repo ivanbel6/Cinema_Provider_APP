@@ -424,12 +424,12 @@ class HomeFragment : Fragment() {
             "frameLayout_11" -> {
                 when (adapterPosition) {
                     0 -> {
-                        showFragment(R.drawable.historic_7)
-                        Toast.makeText(
-                            requireContext(),
-                            "Драмма -> 0",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        showFragment(
+                            R.drawable.historic_7,
+                            arrayListOf("Drama", "Horror", "Historic"),
+                            "Вышел",
+                            "Описание"
+                        )
                     }
 
                     1 -> {
@@ -1527,8 +1527,13 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun showFragment(cardImage:Int) {
-        val fragment = BlankHomeFragment.newInstance(cardImage)
+    private fun showFragment(
+        cardImage: Int,
+        str: ArrayList<String>,
+        Status: String,
+        Description: String
+    ) {
+        val fragment = BlankHomeFragment.newInstance(cardImage, str, Status, Description)
         changeFragment(fragment)
     }
 
